@@ -35,7 +35,7 @@
 /*---> LAYOUT <-------------------------------*/
 /*--------------------------------------------*/
 
-@defaultPadding: 10px;
+@defaultPadding: 1.00em;
 @defaultMargin: 0px;
 @defaultWidth: 400px;
 
@@ -70,7 +70,7 @@ div#buildings{
 
 }
 
-div#grass{
+div#wood{
 	background: url('retinaWood.png');
 	.FullWidth();
 }
@@ -121,30 +121,34 @@ input, select, button{
 	.FormCleanse();
 }
 
-div#grass{
+div#wood{
 
 	@inputHeight: 2em;
 
+	padding: 2em auto;
 	float: left;
 	.Center();
 
+	p{
+		.BitterFont(@darkGreen, 1.5em);
+	}
+
 	input, button{
 		background: transparent;
-		height: @inputHeight;
-		line-height: @inputHeight + 0.25em;
-		margin: 3em auto;
+		margin: 0 auto 2em;
 		border: 0.5em solid @darkGreen;
+		text-align: center;
 	}
 
 	input{
 		width: 30%;
-		padding: 0 10px;
+		padding: 0 1em;
+		margin-right: 0.5em;
 		.BitterFont(@darkGreen, 1.5em);
 	}
 
 	button{
-		width: 20%;
-		height: 3em;
+		width: @inputHeight + 1em;
 		.BitterFont(@darkGreen, 1.5em);
 		// Based on tutorial from: stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css
 		background: linear-gradient(to right, transparent 50%, white 50%);
@@ -154,7 +158,11 @@ div#grass{
 
 	button:hover{
 		background-position: right bottom;
-		transition: all 0.5s linear;
+		transition: all 0.5s ease;
+	}
+
+	button:active{
+		background: @lightGreen;
 	}
 
 }
