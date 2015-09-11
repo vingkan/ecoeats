@@ -36,7 +36,7 @@
 /*--------------------------------------------*/
 
 @defaultPadding: 10px;
-@defaultMargin: @defaultPadding;
+@defaultMargin: 0px;
 @defaultWidth: 400px;
 
 .BoxModel(@size: @defaultPadding){
@@ -61,6 +61,7 @@ div#sky{
 
 div#buildings{
 
+	background: @ecoGreen;
 	.FullWidth();
 
 	img{
@@ -70,6 +71,11 @@ div#buildings{
 }
 
 div#grass{
+	background: url('retinaWood.png');
+	.FullWidth();
+}
+
+div#footer{
 	background: @ecoGreen;
 	.FullWidth();
 }
@@ -107,6 +113,8 @@ img#teaserLogo{
 .FormCleanse(){
 	outline: none;
 	border: none;
+	margin: 0;
+	padding: 0;
 }
 
 input, select, button{
@@ -115,17 +123,27 @@ input, select, button{
 
 div#grass{
 
+	@inputHeight: 2em;
+
 	float: left;
+	.Center();
+
+	input, button{
+		height: @inputHeight;
+		line-height: @inputHeight + 0.25em;
+		margin: 3em auto;
+		border: 0.5em solid @darkGreen;
+	}
 
 	input{
-		border: 0.5em solid @darkGreen;
-		padding: @defaultPadding;
+		width: 30%;
+		padding: 0 10px;
 		.BitterFont(@darkGreen, 1.5em);
-		//.Center();
 	}
 
 	button{
-		background: @darkGreen;
+		width: 20%;
+		background: @ecoGreen;
 		.BitterFont(white, 1.5em);
 	}
 
@@ -135,35 +153,37 @@ div#grass{
 /*---> SCROLLBAR <----------------------------*/
 /*--------------------------------------------*/
 
+@scrollBar: @darkGreen;
+@scrollBarBack: @ecoGreen;
+
 ::-webkit-scrollbar{
 	width: 10px;
 	height: 10px;
-	background: transparent;
+	background: @scrollBarBack;
 }
 
 ::-webkit-scrollbar-button{
-	background: transparent;
+	background: @scrollBarBack;
 }
 
 ::-webkit-scrollbar-track{
-	background: transparent;
+	background: @scrollBarBack;
 }
 
 ::-webkit-scrollbar-track-piece{
-	background: transparent;
+	background: @scrollBarBack;
 }
 
 ::-webkit-scrollbar-thumb{
-	/*background: rgba(255, 255, 255, 0.5);*/
-	background: #2d0a58;
+	background: @scrollBar;
 }
 
 ::-webkit-scrollbar-corner{
 	width: 10px;
 	height: 10px;
-	background: transparent;
+	background: @scrollBarBack;
 }
 
 ::-webkit-resizer{
-	background: transparent;
+	background: @scrollBarBack;
 }
