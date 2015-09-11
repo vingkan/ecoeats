@@ -52,6 +52,12 @@ div#sky{
 	background: @skyBlue;
 }
 
+div#buildings{
+	img{
+		width: 100%;
+	}
+}
+
 div#grass{
 	background: @ecoGreen;
 }
@@ -61,8 +67,9 @@ div#grass{
 /*--------------------------------------------*/
 
 p{
-	.BitterFont(white, 20px);
-	.BoxModel();
+	padding: @defaultPadding;
+	.BitterFont(white, 1.25em);
+	.Center();
 }
 
 /*--------------------------------------------*/
@@ -72,6 +79,7 @@ p{
 .Center(){
 	margin: auto auto;
 	display: block;
+	text-align: center;
 }
 
 img#teaserLogo{
