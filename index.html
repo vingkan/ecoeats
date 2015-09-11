@@ -39,8 +39,14 @@
 		</div>
 	</div>
 
-	<div style="display: block;">
-		<form action="https://docs.google.com/a/hawk.iit.edu/forms/d/1C_2NjqxMxBH6o21nmDlE0y2EoFEjG-uw4Qr428SLFZU/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
+	<div style="display: none;">
+		<script type="text/javascript">
+			var submitted = false;
+		</script>
+		<iframe name="hidden-iframe" id="hidden-iframe" style="display: none;" onload="if(submitted){window.location='teaser.html';}"></iframe>
+		<form action="https://docs.google.com/a/hawk.iit.edu/forms/d/1C_2NjqxMxBH6o21nmDlE0y2EoFEjG-uw4Qr428SLFZU/formResponse" method="POST" id="ss-form" target="hidden-iframe" onsubmit="submitted = true;">
+
+		<ol role="list" class="ss-question-list" style="padding-left: 0">
 		<div class="ss-form-question errorbox-good" role="listitem">
 		<div dir="auto" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
 		<label class="ss-q-item-label" for="entry_1282620408"><div class="ss-q-title">Email Address
@@ -62,7 +68,7 @@
 	</div>
 
 	<script type="text/javascript">
-	
+
 		function submitChef(){
 			var googleInput = document.getElementById('entry_1282620408');
 			var userInput = document.getElementById('teaserForm').value;
