@@ -146,6 +146,15 @@ div#grass{
 		width: 20%;
 		height: 3em;
 		.BitterFont(@darkGreen, 1.5em);
+		// Based on tutorial from: stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css
+		background: linear-gradient(to right, transparent 50%, white 50%);
+		background-size: 200% 100%;
+		background-position: left bottom;
+	}
+
+	button:hover{
+		background-position: right bottom;
+		transition: all 0.5s linear;
 	}
 
 }
