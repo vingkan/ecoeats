@@ -14,7 +14,7 @@
 @bitter: 'Bitter', serif;
 @margarine: 'Margarine', cursive;
 
-.BitterFont(@textColor: white, @size: 1.5em){
+.BitterFont(@textColor: white, @size: 1.25em){
 	font-family: @bitter;
 	color: @textColor;
 	font-size: @size;
@@ -36,6 +36,7 @@
 /*--------------------------------------------*/
 
 @defaultPadding: 10px;
+@defaultMargin: @defaultPadding;
 @defaultWidth: 400px;
 
 .BoxModel(@size: @defaultPadding){
@@ -43,23 +44,34 @@
 	margin: @size;
 }
 
+.FullWidth(){
+	margin: 0;
+	width: 100%;
+}
+
 html{
-	background: @ecoGreen;
+	background: transparent;
 	//animation: animatedBackground 1s linear infinite;
 }
 
 div#sky{
 	background: @skyBlue;
+	.FullWidth();
 }
 
 div#buildings{
+
+	.FullWidth();
+
 	img{
-		width: 100%;
+		.FullWidth();
 	}
+
 }
 
 div#grass{
 	background: @ecoGreen;
+	.FullWidth();
 }
 
 /*--------------------------------------------*/
@@ -97,6 +109,61 @@ img#teaserLogo{
 	border: none;
 }
 
-input, select{
+input, select, button{
 	.FormCleanse();
+}
+
+div#grass{
+
+	float: left;
+
+	input{
+		border: 0.5em solid @darkGreen;
+		padding: @defaultPadding;
+		.BitterFont(@darkGreen, 1.5em);
+		//.Center();
+	}
+
+	button{
+		background: @darkGreen;
+		.BitterFont(white, 1.5em);
+	}
+
+}
+
+/*--------------------------------------------*/
+/*---> SCROLLBAR <----------------------------*/
+/*--------------------------------------------*/
+
+::-webkit-scrollbar{
+	width: 10px;
+	height: 10px;
+	background: transparent;
+}
+
+::-webkit-scrollbar-button{
+	background: transparent;
+}
+
+::-webkit-scrollbar-track{
+	background: transparent;
+}
+
+::-webkit-scrollbar-track-piece{
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+	/*background: rgba(255, 255, 255, 0.5);*/
+	background: #2d0a58;
+}
+
+::-webkit-scrollbar-corner{
+	width: 10px;
+	height: 10px;
+	background: transparent;
+}
+
+::-webkit-resizer{
+	background: transparent;
 }
