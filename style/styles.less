@@ -5,6 +5,7 @@
 @ecoGreen: #00c853;
 @lightGreen: @ecoGreen + #222222;
 @darkGreen: @ecoGreen - #222222;
+@skyBlue: #8ccee3;
 
 /*--------------------------------------------*/
 /*---> FONTS <--------------------------------*/
@@ -25,15 +26,17 @@
 /*--------------------------------------------*/
 
 @keyframes animatedBackground{
-	from{background: @ecoGreen;}
-	to{background: @darkGreen;}
+	from{background: red;}
+	to{background: yellow;}
 }
+
 
 /*--------------------------------------------*/
 /*---> LAYOUT <-------------------------------*/
 /*--------------------------------------------*/
 
 @defaultPadding: 10px;
+@defaultWidth: 400px;
 
 .BoxModel(@size: @defaultPadding){
 	padding: @size;
@@ -42,7 +45,15 @@
 
 html{
 	background: @ecoGreen;
-	animation: animatedBackground 1s linear infinite;
+	//animation: animatedBackground 1s linear infinite;
+}
+
+div#sky{
+	background: @skyBlue;
+}
+
+div#grass{
+	background: @ecoGreen;
 }
 
 /*--------------------------------------------*/
@@ -51,5 +62,33 @@ html{
 
 p{
 	.BitterFont(white, 20px);
-	.BoxModel;
+	.BoxModel();
+}
+
+/*--------------------------------------------*/
+/*---> IMAGES <-------------------------------*/
+/*--------------------------------------------*/
+
+.Center(){
+	margin: auto auto;
+	display: block;
+}
+
+img#teaserLogo{
+	width: 50%;
+	padding: 2.5%;
+	.Center();
+}
+
+/*--------------------------------------------*/
+/*---> FORMS <--------------------------------*/
+/*--------------------------------------------*/
+
+.FormCleanse(){
+	outline: none;
+	border: none;
+}
+
+input, select{
+	.FormCleanse();
 }
