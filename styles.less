@@ -1,0 +1,69 @@
+/*--------------------------------------------*/
+/*---> COLORS <-------------------------------*/
+/*--------------------------------------------*/
+
+@ecoGreen: #00c853;
+@lightGreen: @ecoGreen + #222222;
+@darkGreen: @ecoGreen - #222222;
+
+/*--------------------------------------------*/
+/*---> FONTS <--------------------------------*/
+/*--------------------------------------------*/
+
+@bitter: 'Bitter', serif;
+@margarine: 'Margarine', cursive;
+
+.BitterFont(@textColor: white, @size: 1.5em){
+	font-family: @bitter;
+	color: @textColor;
+	font-size: @size;
+	line-height: @size * 1.5;
+}
+
+/*--------------------------------------------*/
+/*---> BACKGROUND <---------------------------*/
+/*--------------------------------------------*/
+
+/*@keyframes animatedBackground{
+	from{background: @ecoGreen;}
+	to{background: @darkGreen;}
+}*/
+
+/*--------------------------------------------*/
+/*---> LAYOUT <-------------------------------*/
+/*--------------------------------------------*/
+
+@defaultPadding: 10px;
+@defaultWidth: 400px;
+
+.BoxModel(@size: @defaultPadding){
+	padding: @size;
+	margin: @size;
+}
+
+html{
+	background: @ecoGreen;
+	/*animation: animatedBackground 1s linear infinite;*/
+}
+
+/*--------------------------------------------*/
+/*---> TEXT <---------------------------------*/
+/*--------------------------------------------*/
+
+p{
+	.BitterFont(white, 20px);
+	.BoxModel;
+}
+
+/*--------------------------------------------*/
+/*---> IMAGES <-------------------------------*/
+/*--------------------------------------------*/
+
+.centerOnPage(@size: @defaultWidth;){
+	height: @size;
+	margin: 0 auto;
+}
+
+img#teaserLogo{
+	.centerOnPage(200px);
+}
