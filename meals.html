@@ -66,16 +66,22 @@
 	<script type="text/javascript">
 
 		var database = new Firebase('https://ecoeats.firebaseio.com/');
-		var eventDate = new Date(2015, 8, 25, 20);
-		/*database.push({
-			name: "Teriyaki Chicken and Potatoes",
-			id: "aaa000",
-			chef: "Sunny Shah",
-			img: "teriyakiChickenPotato.jpg",
-			date: eventDate,
-			capacity: 5,
-			price: 7
-		});*/
+		// Generated First Meal Here:
+			/*var eventDate = new Date(2015, 8, 25, 20);
+			database.push({
+				name: "Teriyaki Chicken and Potatoes",
+				id: "aaa000",
+				chef: "Sunny Shah",
+				img: "teriyakiChickenPotato.jpg",
+				date: eventDate,
+				capacity: 5,
+				price: 7
+			});*/
+		database.on('value', function(snapshot){
+			var nextMeal = snapshot.exportVal()['-JzwOJd0SaktF_vIg5x0'];
+			console.log(nextMeal);
+			console.log(nextMeal.name + " by " + nextMeal.chef);
+		});
 
 	</script>
 
