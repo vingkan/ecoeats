@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="style/styles.css">
 	<link href='https://fonts.googleapis.com/css?family=Margarine|Bitter:s400,400italic,700' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="img/png" href="style/favicon.png" style="width:30px;">
+	<script type="text/javascript" src="meal.js"></script>
 	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 	<style>
 
@@ -65,6 +66,7 @@
 
 	<script type="text/javascript">
 
+		var meals = [];
 		var database = new Firebase('https://ecoeats.firebaseio.com/');
 		// Generated First Meal Here:
 			/*var eventDate = new Date(2015, 8, 25, 20);
@@ -78,9 +80,8 @@
 				price: 7
 			});*/
 		database.on('value', function(snapshot){
-			var nextMeal = snapshot.exportVal()['-JzwOJd0SaktF_vIg5x0'];
-			console.log(nextMeal);
-			console.log(nextMeal.name + " by " + nextMeal.chef);
+			var meal = new Meal(snapshot.exportVal()['-JzwOJd0SaktF_vIg5x0']);
+			meals.push(meal);
 		});
 
 	</script>
