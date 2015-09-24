@@ -7,6 +7,7 @@
 @darkGreen: @ecoGreen - #222222;
 @skyBlue: #8ccee3;
 @charcoal: #1a1a1a;
+@friendshipOrange: #ea541e;
 
 /*--------------------------------------------*/
 /*---> FONTS <--------------------------------*/
@@ -197,7 +198,7 @@ div.mealPreview{
 	margin: 1em;
 
 	div.mealTitle{
-		background: rgba(255, 255, 255, 0.5);
+		background: @darkGreen;
 		padding: 0.5em;
 		margin: -1em;
 		margin-top: 0.5em;
@@ -205,13 +206,43 @@ div.mealPreview{
 	}
 
 	h2{
-		.BitterFont(@charcoal, 1.25em);
+		.BitterFont(white, 1.00em);
 	}
 
 	h3{
-		.BitterFont(lighten(@charcoal, 10%), 1em);
+		.BitterFont(darken(white, 20%), 0.75em);
 		font-style: italic;
 	}
+
+	div.bubble{
+		.BitterFont(white, 0.75em);
+		position: relative;
+		margin: 0.25em;
+		margin-left: -0.5em;
+		margin-top: 7em;
+		float: left;
+		color: white;
+		width: 3em;
+		height: 3em;
+		line-height: 3em;
+		border-radius: 1.5em;
+		text-align: center;
+	}
+
+		div.price{
+			background: @darkGreen;
+			z-index: 10;
+		}
+
+		div.capacity{
+			background: darken(@skyBlue, 30%);
+			z-index: 5;
+		}
+
+		div.date{
+			background: @friendshipOrange;
+			width: 8em;
+		}
 
 	//background-image property filled in by HTML
 	background-repeat: no-repeat;
@@ -326,13 +357,7 @@ div.wood{
 
 @media screen and (max-aspect-ratio: 3/2){
 	
-	input, button{
-		padding: 0;
-		display: block;
-		width: 100%;
-		.Center();
-		margin: 1em auto;
-	}
+	
 
 }
 
