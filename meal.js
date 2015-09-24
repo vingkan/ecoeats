@@ -9,6 +9,9 @@ function loadMeals(){
 			upcomingMeals.innerHTML += '<p>' + meals[m] + '</p>';
 		}
 	}
+	else{
+		upcomingMeals.innerHTML += '<p>No meals are currently listed. Host your own!</p>';
+	}
 }
 
 function Meal(snapshot){
@@ -23,6 +26,10 @@ function Meal(snapshot){
 
 Meal.prototype.toString = function(){
 	return this.name + " by " + this.chef + ": " + moment(this.timestamp).calendar() + " for " + this.capacity + " people at " + money(this.price) + " each.";
+}
+
+Meal.prototype.toHTML = function(){
+
 }
 
 function money(value){

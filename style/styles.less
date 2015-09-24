@@ -127,13 +127,6 @@ div.wood{
 
 }
 
-div#upcomingMeals{
-	background: rgba(255, 255, 255, 0.25);
-	padding: 1em 0;
-	.BitterFont(@darkGreen);
-	.Center();
-}
-
 div#footer{
 
 	background: @darkGreen;
@@ -183,6 +176,21 @@ header{
 
 }
 
+/*--------------------------------------------*/
+/*---> MEALS <--------------------------------*/
+/*--------------------------------------------*/
+
+div#upcomingMeals{
+	background: rgba(255, 255, 255, 0.25);
+	.BitterFont(@darkGreen);
+	.Center();
+}
+
+div.mealPreview{
+	background: orange;
+	width: 10em;
+	height: 10em;
+}
 
 /*--------------------------------------------*/
 /*---> TEXT <---------------------------------*/
@@ -201,6 +209,11 @@ h1{
 }
 
 h1 + p{
+	margin-top: 0;
+	padding-top: 0;
+}
+
+p + p{
 	margin-top: 0;
 	padding-top: 0;
 }

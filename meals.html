@@ -52,7 +52,11 @@
 		<div class="wood">
 			<h1>Upcoming Meals</h1>
 			<div id="upcomingMeals">
-				<p>No meals are currently listed. Host your own!</p>
+
+				<div class="mealPreview">
+					<h2>{{Meal Name}}</h2>
+				</div>
+
 			</div>
 		</div>
 		<div id="buildings" style="background-image: url('style/buildingsBanner.png');"></div>
@@ -90,8 +94,8 @@
 				var childData = childSnapshot.val();
 				var meal = new Meal(childData);
 				meals.push(meal);
-				loadMeals();
 			});
+			loadMeals();
 		});
 
 
