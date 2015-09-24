@@ -163,6 +163,7 @@ header{
 
 	position: fixed;
 	background: rgba(255, 255, 255, 0.75);
+	border-bottom: 5px solid @ecoGreen;
 	height: 60px;
 	.FullWidth();
 
@@ -279,8 +280,8 @@ div.wood{
 /*---> SCROLLBAR <----------------------------*/
 /*--------------------------------------------*/
 
-@scrollBar: @darkGreen;
-@scrollBarBack: @ecoGreen;
+@scrollBar: white;
+@scrollBarBack: transparent;
 
 ::-webkit-scrollbar{
 	width: 10px;
@@ -302,6 +303,9 @@ div.wood{
 
 ::-webkit-scrollbar-thumb{
 	background: @scrollBar;
+	border-radius: 5px;
+	position: absolute;
+	margin-left: -10px;
 }
 
 ::-webkit-scrollbar-corner{
