@@ -227,28 +227,37 @@ div.mealPreview{
 	div.bubble{
 		.BitterFont(white, 0.75em);
 		position: relative;
-		margin-left: -0.5em;
+		margin-left: -0.60em;
 		float: left;
 		color: white;
 		width: 3em;
 		height: 3em;
 		line-height: 3em;
-		border-radius: 1.5em;
+		border-radius: 3.25em;
 		text-align: center;
+		background: rgba(255, 255, 255, 0.75);
 	}
 
+		@borderSize: 0.25em;
+
 		div.price{
-			background: @darkGreen;
+			@borderColor: @darkGreen;
+			border: @borderSize solid @borderColor;
+			color: @borderColor;
 			z-index: 10;
 		}
 
 		div.capacity{
-			background: darken(@skyBlue, 30%);
+			@borderColor: darken(@skyBlue, 30%);
+			border: @borderSize solid @borderColor;
+			color: @borderColor;
 			z-index: 5;
 		}
 
 		div.date{
-			background: @friendshipOrange;
+			@borderColor: @friendshipOrange;
+			border: @borderSize solid @borderColor;
+			color: @borderColor;
 			width: 9em;
 			font-size: 0.65em;
 			padding: .25em 0;
@@ -262,14 +271,6 @@ div.mealPreview{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
-}
-
-div#mealDisplay{
-
-	img.meal-img{
-		width: 200px;
-	}
 
 }
 
