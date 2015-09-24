@@ -49,18 +49,10 @@ Meal.prototype.toHTML = function(){
 
 Meal.prototype.getHTMLPayButton = function(){
 	var button = '';
-button += '<script src="https://www.dwolla.com/scripts/button.min.js"'
-button += 'class="dwolla_button" type="text/javascript"'
-button += 'type="text/javascript"'
-button += 'data-key="DZ4cNXNsCrG4xbTyKPGqt4HEasxWBqk1c6pClzTSps5HU4bbDV"'
-button += 'data-redirect="http://ecoeats.tk/"'
-button += 'data-label="Pay Now"'
-button += 'data-name="EcoEats Meal"'
-button += 'data-description="Meal"'
-button += 'data-amount="5"'
-button += 'data-guest-checkout="true"'
-button += 'data-type="simple">'
-button += '</script>'
+		button += '<a class="d-btn d-btn-simple" data-key="DZ4cNXNsCrG4xbTyKPGqt4HEasxWBqk1c6pClzTSps5HU4bbDV" data-redirect="http://ecoeats.tk/" data-label="Pay and Join" data-name="EcoEats Meal: ' + this.name + '" data-description="..." data-amount="' + this.price + '" data-guest-checkout="true" data-type="simple">';
+			button += '<span class="d-btn-text">Pay and Join</span>';
+			button += '<span class="d-btn-icon"></span>';
+		button += '</a>';
 	return button;
 }
 
