@@ -34,6 +34,7 @@ Meal.prototype.toHTML = function(){
 	html += '<div class="mealPreview" onclick="viewMeal(&#39;' + this.id + '&#39;)" style="background-image: url(&#39;style/meals/' + this.img + '&#39;);">';
 		html += '<div class="info">';
 			html += '<div class="mealPay">';
+			html += '<p>Join us at ' + this.location + ' ' + moment(this.timestamp).calendar() + ' for this meal.</p>';
 			html += this.getHTMLPayButton();
 			html += '</div>';
 			html += '<div class="bubble price">$' + this.price + ' per person</div>';
