@@ -8,7 +8,6 @@ function loadMeals(){
 		for(var m = 0; m < meals.length; m++){
 			upcomingMeals.innerHTML += meals[m].toHTML();
 		}
-		upcomingMeals.innerHTML += meals[0].getHTMLPayButton();
 	}
 	else{
 		upcomingMeals.innerHTML += '<p>No meals are currently listed. Host your own!</p>';
@@ -50,18 +49,18 @@ Meal.prototype.toHTML = function(){
 
 Meal.prototype.getHTMLPayButton = function(){
 	var button = '';
-	button += '<script';
-	  button += 'src="https://www.dwolla.com/scripts/button.min.js" class="dwolla_button" type="text/javascript"';
-	  button += 'data-key="DZ4cNXNsCrG4xbTyKPGqt4HEasxWBqk1c6pClzTSps5HU4bbDV"';
-	  button += 'data-redirect="http://ecoeats.tk/"';
-	  button += 'data-label="Pay Now"';
-	  button += 'data-name="' + this.name + '"';
-	  button += 'data-description="undefined"';
-	  button += 'data-amount="' + this.price + '"';
-	  button += 'data-guest-checkout="true"';
-	  button += 'data-type="simple"';
-	button += '>';
-	button += '</script>';
+button += '<script src="https://www.dwolla.com/scripts/button.min.js"'
+button += 'class="dwolla_button" type="text/javascript"'
+button += 'type="text/javascript"'
+button += 'data-key="DZ4cNXNsCrG4xbTyKPGqt4HEasxWBqk1c6pClzTSps5HU4bbDV"'
+button += 'data-redirect="http://ecoeats.tk/"'
+button += 'data-label="Pay Now"'
+button += 'data-name="EcoEats Meal"'
+button += 'data-description="Meal"'
+button += 'data-amount="5"'
+button += 'data-guest-checkout="true"'
+button += 'data-type="simple">'
+button += '</script>'
 	return button;
 }
 
