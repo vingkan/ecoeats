@@ -19,6 +19,7 @@ function Meal(snapshot){
 	this.id = snapshot.id;
 	this.chef = snapshot.chef;
 	this.timestamp = snapshot.timestamp;
+	this.location = snapshot.location;
 	this.img = snapshot.img;
 	this.price = snapshot.price;
 	this.capacity = snapshot.capacity;
