@@ -191,18 +191,35 @@ div#upcomingMeals{
 div.mealPreview{
 
 	display: inline-block;
-	background: @lightGreen;
 	width: 10em;
 	height: 10em;
 	padding: 1em;
 	margin: 1em;
 
-	h2{
+	div.mealTitle{
 		background: rgba(255, 255, 255, 0.5);
 		padding: 0.5em;
 		margin: -1em;
+		margin-top: 0.5em;
 		position: relative;
 	}
+
+	h2{
+		.BitterFont(@charcoal, 1.25em);
+	}
+
+	h3{
+		.BitterFont(lighten(@charcoal, 10%), 1em);
+		font-style: italic;
+	}
+
+	//background-image property filled in by HTML
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 
 }
 
