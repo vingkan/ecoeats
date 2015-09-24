@@ -1,6 +1,9 @@
 function loadMeals(){
 	var upcomingMeals = document.getElementById('upcomingMeals');
 	if(meals.length > 0){
+		meals.sort(function(a, b){
+			return sortMealsByTimestamp(a, b);
+		});
 		upcomingMeals.innerHTML = "";
 		for(var m = 0; m < meals.length; m++){
 			upcomingMeals.innerHTML += '<p>' + meals[m] + '</p>';
@@ -24,4 +27,8 @@ Meal.prototype.toString = function(){
 
 function money(value){
 	return "$" + value.toFixed(2);
+}
+
+function sortMealsByTimestamp(meal1, meal2){
+	return meal1.timestamp - meal2.timestamp;
 }
