@@ -185,8 +185,8 @@ div#upcomingMeals{
 	background: rgba(255, 255, 255, 0.25);
 	.BitterFont(@darkGreen);
 	.Center();
-	padding: 1em;
-	margin: 1em;
+	//padding: 1em;
+	//margin: 1em;
 }
 
 div.mealPreview{
@@ -198,28 +198,36 @@ div.mealPreview{
 	margin: 1em;
 
 	div.mealTitle{
-		background: @darkGreen;
+		background: rgba(255, 255, 255, 0.75);
 		padding: 0.5em;
-		margin: -1em;
-		margin-top: 0.5em;
+		height: 3em;
+		margin: 3.5em -1em 0 -1em;
 		position: relative;
 	}
 
+	h2, h3{
+		float: left;
+		width: 100%;
+	}
+
 	h2{
-		.BitterFont(white, 1.00em);
+		.BitterFont(@charcoal, 0.80em);
+		margin-bottom: 0.25em;
 	}
 
 	h3{
-		.BitterFont(darken(white, 20%), 0.75em);
+		.BitterFont(lighten(@charcoal, 20%), 0.65em);
 		font-style: italic;
+	}
+
+	div.info{
+		height: 3.5em;
 	}
 
 	div.bubble{
 		.BitterFont(white, 0.75em);
 		position: relative;
-		margin: 0.25em;
 		margin-left: -0.5em;
-		margin-top: 7em;
 		float: left;
 		color: white;
 		width: 3em;
@@ -241,7 +249,10 @@ div.mealPreview{
 
 		div.date{
 			background: @friendshipOrange;
-			width: 8em;
+			width: 9em;
+			font-size: 0.65em;
+			padding: .25em 0;
+			border-radius: 2em;
 		}
 
 	//background-image property filled in by HTML
