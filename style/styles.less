@@ -288,7 +288,7 @@ div.mealPreview{
 			.BitterFont(@darkGreen, 0.75em);
 		}
 
-		a.d-btn, a.d-btn-simple, form.paypalForm{
+		a.d-btn, a.d-btn-simple{
 			height: 1.625em;
 			line-height: 1.625em;
 			width: 9em;
@@ -300,9 +300,16 @@ div.mealPreview{
 			transition: all 0.5s;
 		}
 
-		a.d-btn:hover, a.d-btn-simple:hover, form.paypalForm:hover{
+		a.d-btn:hover, a.d-btn-simple:hover{
 			background: @friendshipOrange;
 		}
+
+
+			button.paypal-button{
+				line-height: 1.625em;
+				width: 10em;
+			}
+
 
 	}
 
@@ -416,7 +423,7 @@ div.wood{
 		.BitterFont(@darkGreen, 1.25em);
 	}
 
-	input, button{
+	input, button#teaserSubmit{
 		background: transparent;
 		margin: 0 auto 2em;
 		border: 0.5em solid @darkGreen;
@@ -430,7 +437,7 @@ div.wood{
 		.BitterFont(@darkGreen, 1.5em);
 	}
 
-	button{
+	button#teaserSubmit{
 		width: @inputHeight + 1em;
 		.BitterFont(@darkGreen, 1.5em);
 		// Based on tutorial from: stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css
@@ -439,12 +446,12 @@ div.wood{
 		background-position: left bottom;
 	}
 
-	button:hover{
+	button#teaserSubmit:hover{
 		background-position: right bottom;
 		transition: all 0.5s ease;
 	}
 
-	button:active{
+	button#teaserSubmit:active{
 		background: @lightGreen;
 	}
 
