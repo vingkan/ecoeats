@@ -67,7 +67,7 @@ Meal.prototype.getHTMLPayButton = function(){
 			button += '<input type="hidden" name="business" value="QWZMVF8ZHS2P4">';
 			button += '<input type="hidden" name="bn" value="JavaScriptButton_buynow">';
 			button += '<input type="hidden" name="env" value="www">';
-			button += '<button type="submit" class="paypal-button large">Pay Now</button>';
+			button += '<button type="submit" id="' + this.id + '" onclick="togglePayButton(&#39;' + this.id + '&#39;);" class="paypal-button large">Pay Now</button>';
 		button += '</form>';
 	return button;
 }
