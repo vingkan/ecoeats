@@ -6,7 +6,9 @@ function loadMeals(){
 		});
 		upcomingMeals.innerHTML = "";
 		for(var m = 0; m < meals.length; m++){
-			upcomingMeals.innerHTML += meals[m].toHTML();
+			//if(meals[m].timestamp > new Date().getTime()){
+				upcomingMeals.innerHTML += meals[m].toHTML();
+			//}
 		}
 	}
 	else{
