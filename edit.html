@@ -57,6 +57,7 @@
 				<option value="new-meal">Add New Meal</option>
 				<option value="meal-id">Sample Meal</option>
 			</select>
+			<button>&#10004;</button>
 			<div id="editForm">
 				<label>
 					<div>name</div>
@@ -92,7 +93,6 @@
 				</label>
 				<button id="teaserSubmit">Update Meal</button>
 			</div>
-			<div id="upcomingMeals"></div>
 	</div>
 
 	<div class="wood">
@@ -124,7 +124,7 @@
 				var meal = new Meal(childData);
 				meals.push(meal);
 			});
-			loadMeals();
+			//loadMeals();
 		});
 
 

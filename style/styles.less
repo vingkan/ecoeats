@@ -385,22 +385,38 @@ select{
 	height: 2em;
 	outline: none;
 	.BitterFont();
-	background: transparent;
-	color: @darkGreen;
+	background: @darkGreen;
+	color: white;
 
 	option{
-		background: @lightGreen;
+		background: @darkGreen;
 		color: white;
 		outline: none;
 		border: none;
 	}
 
 	&:focus{
+		background: transparent;
+		color: @darkGreen;
 		margin-bottom: 3em;
 	}
 
 	transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
+
+	& ~ button{
+		background: @darkGreen;
+		color: white;
+		height: 2em;
+		line-height: 2em;
+		width: 2em;
+		margin-left: 1em;
+		padding-top: 0.75em;
+		padding-left: 1.25em;
+		padding-right: 2em;
+		padding-bottom: 2.25em;
+		text-align: center;
+	}
 
 }
 
@@ -409,6 +425,7 @@ div#editForm{
 	float: left;
 	width: 100%;
 	clear: both;
+	margin-top: 0.75em;
 	.BitterFont();
 
 	label{
