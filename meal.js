@@ -68,6 +68,45 @@ function loadEditForm(){
 	}
 }
 
+function getNewMealID(){
+	return 'meal-' + (meals.length + 1);
+}
+
+function updateMeal(){
+	var mealSelector = document.getElementById('mealSelector');
+		var nameField = document.getElementById('new-name');
+		var chefField = document.getElementById('new-chef');
+		var priceField = document.getElementById('new-price');
+		var capacityField = document.getElementById('new-capacity');
+		var locationField = document.getElementById('new-location');
+		var dateField = document.getElementById('new-date');
+		var timeField = document.getElementById('new-time');
+		var imgField = document.getElementById('new-img');
+	if(mealSelector.value != 'newMeal'){
+		alert('update info');
+	}
+	else{
+		var dateValue = new Date(dateField.value);
+		var momentObject = moment(dateValue);
+			var hoursValue = timeField.value.substr(0,2);
+			var minutesValue = timeField.value.substr(3,2);
+			momentObject.hours(hoursValue);
+			momentObject.minutes(minutesValue);
+		var eventDate = momentObject.toDate();
+		var newID = getNewMealID();
+		mealDatabase.push({
+			name: nameField.value,
+			id: newID,
+			chef: chefField.value,
+			location: locationField.value,
+			timestamp: eventDate.getTime(),
+			img: imgField.value,
+			capacity: capacityField.value,
+			price: priceField.value
+		});
+	}
+}
+
 function Meal(snapshot){
 	this.name = snapshot.name;
 	this.id = snapshot.id;
