@@ -57,7 +57,7 @@
 				<option value="new-meal">Add New Meal</option>
 				<option value="meal-id">Sample Meal</option>
 			</select>
-			<button>&#10004;</button>
+			<button onclick="loadEditForm();">&#10004;</button>
 			<div id="editForm">
 				<label>
 					<div>name</div>
@@ -65,7 +65,7 @@
 				</label>
 				<label>
 					<div>chef</div>
-					<input id="new-chef" type="text" placeholder="Chef">
+					<input id="new-chef" type="text" placeholder="Chef Name">
 				</label>
 				<label class="number">
 					<div>price ($)</div>
@@ -77,7 +77,7 @@
 				</label>
 				<label>
 					<div>location</div>
-					<input id="new-location" type="text" placeholder="Location">
+					<input id="new-location" type="text" placeholder="Location Name">
 				</label>
 				<label class="number">
 					<div>date</div>
@@ -124,7 +124,7 @@
 				var meal = new Meal(childData);
 				meals.push(meal);
 			});
-			//loadMeals();
+			loadMealOptions();
 		});
 
 
