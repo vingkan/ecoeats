@@ -23,7 +23,7 @@ function loadMealOptions(){
 		meals.sort(function(a, b){
 			return sortMealsByTimestamp(a, b);
 		});
-		mealSelector.innerHTML = '<option value="newMeal">Add New Meal</option>';
+		mealSelector.innerHTML = '<option value="newMeal">Add: New Meal</option>';
 		for(var m = 0; m < meals.length; m++){
 			if(meals[m].timestamp > new Date().getTime()){
 				mealSelector.innerHTML += meals[m].toOption();
@@ -89,6 +89,12 @@ Meal.prototype.getHTMLPayButton = function(){
 			button += '<button type="submit" id="' + this.id + '" onclick="togglePayButton(&#39;' + this.id + '&#39;);" class="paypal-button large">Pay Now</button>';
 		button += '</form>';
 	return button;
+}
+
+Meal.prototype.toOption = function(){
+	var html = '';
+		html += '<option value="' + this.id + '">Edit: ' + this.name + '</option>';
+	return html;
 }
 
 function money(value){
