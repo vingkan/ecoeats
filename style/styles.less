@@ -379,6 +379,31 @@ div.mealPreview{
 /*---> EDITING <------------------------------*/
 /*--------------------------------------------*/
 
+select{
+
+	width: 60%;
+	height: 2em;
+	outline: none;
+	.BitterFont();
+	background: transparent;
+	color: @darkGreen;
+
+	option{
+		background: @lightGreen;
+		color: white;
+		outline: none;
+		border: none;
+	}
+
+	&:focus{
+		margin-bottom: 3em;
+	}
+
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+
+}
+
 div#editForm{
 
 	float: left;
@@ -419,8 +444,8 @@ div#editForm{
 			background-size: 100% 200%;
 			background-position: left bottom;
 			padding: 0 0.25em;
-			margin-top: 1.5em;
-			margin-bottom: 1em;
+			margin-top: 1.25em;
+			margin-bottom: 0.25em;
 
 			&:focus{
 				background-position: left top;
@@ -436,11 +461,30 @@ div#editForm{
 	}
 
 	label.number{
+
 		width: 50%;
 		float: left;
+		
 		input{
 			width: 60%;
 		}
+
+	}
+
+	button#teaserSubmit{
+
+		margin-top: 1em;
+		width: 60%;
+		border: 0.1em solid @darkGreen;
+		border-radius: 2em;
+
+		&:hover{
+			border: 0.5em solid @darkGreen;
+		}
+
+		transition: all 0.5s ease;
+		-webkit-transition: all 0.5s ease;
+
 	}
 
 }

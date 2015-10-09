@@ -52,6 +52,11 @@
 	<div class="wood">
 			<div class="headerSpace"></div>
 			<h1>Add/Edit Meals</h1>
+			<p>Enter your information below for a new meal. To edit an existing meal, find it in the selector to load its data.</p>
+			<select>
+				<option value="new-meal">Add New Meal</option>
+				<option value="meal-id">Sample Meal</option>
+			</select>
 			<div id="editForm">
 				<label>
 					<div>name</div>
@@ -62,7 +67,7 @@
 					<input id="new-chef" type="text" placeholder="Chef">
 				</label>
 				<label class="number">
-					<div>price</div>
+					<div>price ($)</div>
 					<input id="new-price" type="number" placeholder="5">
 				</label>
 				<label class="number">
@@ -85,6 +90,7 @@
 					<div>img</div>
 					<input id="new-img" type="text" placeholder="Image URL">
 				</label>
+				<button id="teaserSubmit">Update Meal</button>
 			</div>
 			<div id="upcomingMeals"></div>
 	</div>
