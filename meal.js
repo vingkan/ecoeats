@@ -50,8 +50,8 @@ function loadEditForm(){
 				priceField.value = meals[m].price;
 				capacityField.value = meals[m].capacity;
 				locationField.value = meals[m].location;
-				dateField.value = meals[m].timestamp);
-				timeField.value = new Date(meals[m].timestamp);
+				dateField.value = moment(meals[m].timestamp).format('YYYY-MM-DD');
+				timeField.value = moment(meals[m].timestamp).format('HH:MM');
 				imgField.value = meals[m].img;
 			}
 		}
