@@ -17,6 +17,21 @@ function loadMeals(displayPast){
 	}
 }
 
+function loadMealOptions(){
+	var mealSelector = document.getElementById('mealSelector');
+	if(meals.length > 0){
+		meals.sort(function(a, b){
+			return sortMealsByTimestamp(a, b);
+		});
+		mealSelector.innerHTML = '<option value="newMeal">Add New Meal</option>';
+		for(var m = 0; m < meals.length; m++){
+			if(meals[m].timestamp > new Date().getTime()){
+				mealSelector.innerHTML += meals[m].toOption();
+			}
+		}
+	}
+}
+
 function Meal(snapshot){
 	this.name = snapshot.name;
 	this.id = snapshot.id;
