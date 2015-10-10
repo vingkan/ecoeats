@@ -122,6 +122,7 @@
 				var key = childSnapshot.key();
 				var childData = childSnapshot.val();
 				var meal = new Meal(childData);
+				meal.id = key;
 				meals.push(meal);
 			});
 			loadMealOptions();
