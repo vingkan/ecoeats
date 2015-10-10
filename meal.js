@@ -35,6 +35,8 @@ function loadMealOptions(){
 function loadEditForm(){
 	var editForm = document.getElementById('editForm');
 		editForm.style.display = 'block';
+	var infoSpacer = document.getElementById('infoSpacer');
+		infoSpacer.style.display = 'none';
 	var mealSelector = document.getElementById('mealSelector');
 		var nameField = document.getElementById('new-name');
 		var chefField = document.getElementById('new-chef');
@@ -112,6 +114,17 @@ function updateMeal(){
 		});
 	}
 	resetMealForm();
+	loadMealOptions();
+	var editForm = document.getElementById('editForm');
+		editForm.style.display = 'none';
+	var infoSpacer = document.getElementById('infoSpacer');
+		infoSpacer.style.display = 'block';
+}
+
+function deleteEntry(){
+	var mealSelector = document.getElementById('mealSelector');
+	mealDatabase.child(mealSelector.value).remove();
+	loadMealOptions();
 }
 
 function resetMealForm(){

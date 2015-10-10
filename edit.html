@@ -52,12 +52,13 @@
 	<div class="wood">
 			<div class="headerSpace"></div>
 			<h1>Add/Edit Meals</h1>
-			<p>Enter your information below for a new meal. To edit an existing meal, find it in the selector to load its data.</p>
 			<select id="mealSelector">
 				<option value="new-meal">Add New Meal</option>
 				<option value="meal-id">Sample Meal</option>
 			</select>
 			<button onclick="loadEditForm();">&#10004;</button>
+			<button onclick="deleteEntry();" style="background: #CF0008;">&#935;</button>
+			<p id="infoSpacer">Enter your information below for a new meal. To edit an existing meal, find it in the selector to load its data.</p>
 			<div id="editForm">
 				<label>
 					<div>name</div>
