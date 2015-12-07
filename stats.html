@@ -68,9 +68,12 @@
 
 	<script type="text/javascript">
 
-		function slidePanes(width){
+		function slideToPane(paneNumber){
+			var tabWidth = 90;
+			var index = paneNumber - 1;
+			var newMargin = -1 * index * tabWidth;
 			var slider = document.getElementById('pane-slider');
-			slider.style.marginLeft = width;
+			slider.style.marginLeft = newMargin + 'vw';
 		}
 
 	</script>
