@@ -69,13 +69,88 @@
 }
 
 /*--------------------------------------------*/
+/*---> STRUCTURE <----------------------------*/
+/*--------------------------------------------*/
+
+html, body{
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+}
+
+.FullWidth(){
+	margin: 0;
+	width: 100%;
+}
+
+header{
+
+	position: fixed;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.75);
+	border-top: 5px solid @ecoGreen;
+	border-bottom: none;
+	height: 60px;
+	z-index: 20;
+	.FullWidth();
+
+	img#headerLogo{
+		float: left;
+		height: 40px;
+		margin: 5px 10px 0 10px;
+	}
+
+	div.fb-like{
+		float: right;
+		height: 20px;
+		width: auto;
+		margin: 20px 20px 0 0;
+		background: transparent;
+	}
+
+}
+
+/*--------------------------------------------*/
+/*---> TABS <---------------------------------*/
+/*--------------------------------------------*/
+
+@tabHeight: 7.5vh;
+
+div.tabs-container{
+	width: 100vw;
+	height: @tabHeight;
+	background: white;
+}
+
+ul.tabs-list{
+	width: 100vw;
+}
+
+li.tab{
+	@spacing: 1.5vh;
+	margin-top: @spacing;
+	padding: 0 @spacing;
+	display: inline-block;
+	width: 20vw;
+	height: @tabHeight - @spacing;
+	line-height: @tabHeight - @spacing;
+	background: @charcoal;
+	font-family: @bitter;
+	color: white;
+	border-top-right-radius: 1.5vh;
+}
+
+/*--------------------------------------------*/
 /*---> PANES <--------------------------------*/
 /*--------------------------------------------*/
+
+@paneHeight: 90vh - 60px;
 
 div.pane-container{
 	background: orange;
 	width: 100vw;
-	height: 50vw;
+	height: @paneHeight;
 	overflow: hidden;
 }
 
@@ -89,8 +164,8 @@ div#pane-slider{
 
 section.stats-pane{
 	float: left;
-	width: 90vw;
-	height: 30vw;
+	width: 100vw;
+	height: @paneHeight;
 	background: @charcoal;
 }
 

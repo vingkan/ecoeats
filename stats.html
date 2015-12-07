@@ -45,31 +45,35 @@
 		<div class="fb-like" data-href="http://ecoeats.tk/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 	</header>
 
-	
-	<div class="headerSpace"></div>
+	<div class="tabs-container">
+		<ul class="tabs-list">
+			<li class="tab" onclick="slideToPane(1);">Traction</li>
+			<li class="tab" onclick="slideToPane(2);">Testing</li>
+		</ul>
+	</div>
 
 	<div class="pane-container">
 
 		<div id="pane-slider">
 
-	<section class="stats-pane">
-		<p>Traction</p>
-	</section>
+			<section class="stats-pane">
+				<p>Traction</p>
+			</section>
 
-
-	<section class="stats-pane">
-		<p>Testing</p>
-	</section>
+			<section class="stats-pane">
+				<p>Testing</p>
+			</section>
 
 		</div>
 
 	</div>
-		
 
+	<div class="headerSpace"></div>
+		
 	<script type="text/javascript">
 
 		function slideToPane(paneNumber){
-			var tabWidth = 90;
+			var tabWidth = 100;
 			var index = paneNumber - 1;
 			var newMargin = -1 * index * tabWidth;
 			var slider = document.getElementById('pane-slider');
