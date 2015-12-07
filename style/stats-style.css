@@ -1,1 +1,1 @@
-@-webkit-keyframes animatedBackgroundRight{from{background-position:0 0}to{background-position:10000% 0}}@-webkit-keyframes animatedBackgroundLeft{from{background-position:0 0}to{background-position:-10000% 0}}
+@-webkit-keyframes animatedBackgroundRight{from{background-position:0 0}to{background-position:10000% 0}}@-webkit-keyframes animatedBackgroundLeft{from{background-position:0 0}to{background-position:-10000% 0}}div.pane-container{background:orange;width:100vw;height:30vw;overflow:hidden}section.stats-pane{display:inline-block;width:40vw;height:30vw;background:#1a1a1a}
