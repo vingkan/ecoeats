@@ -68,6 +68,12 @@
 			<section class="stats-pane">
 				<div class="pane-content">
 					<h1>How it Works</h1>
+					<div id="scaled-text">
+						<p><span>4</span> team members</p>
+						<p><span>7</span> events</p>
+						<p><span>12</span> chefs</p>
+						<p><span>21</span> customers</p>
+					</div>
 				</div>
 			</section>
 
@@ -109,17 +115,23 @@
 			pane.style.background = '#00c853';
 		}
 
-		var circleDiv = document.getElementById('radial-pie');
-		var circleChart = d3.select(circleDiv);
-
 		start();
 
+		slideToPane(2);
+
 		function start(){
+
+			var circleDiv = document.getElementById('radial-pie');
 			var radial = radialProgress(circleDiv)
 				.label('Pie Chart')
 				.diameter(200)
 				.value(78)
 				.render();
+
+			var scaledTextDiv = document.getElementById('scaled-text');
+			d3.select(scaledTextDiv).selectAll("span")
+				.data([12, 4, 7, 21])
+				.style("font-size", function(d){return 3 + (d/2) + 'vh'});
 		}
 
 	</script>
