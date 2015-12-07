@@ -63,6 +63,11 @@
 	-webkit-animation: animatedBackgroundLeft 800s linear infinite;
 }
 
+.AnimateAll(){
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
 /*--------------------------------------------*/
 /*---> PANES <--------------------------------*/
 /*--------------------------------------------*/
@@ -70,13 +75,21 @@
 div.pane-container{
 	background: orange;
 	width: 100vw;
-	height: 30vw;
+	height: 50vw;
 	overflow: hidden;
 }
 
-section.stats-pane{
+div#pane-slider{
+	width: 1000%;
 	display: inline-block;
-	width: 40vw;
+	margin: 0;
+	background: blue;
+	.AnimateAll();
+}
+
+section.stats-pane{
+	float: left;
+	width: 90vw;
 	height: 30vw;
 	background: @charcoal;
 }
