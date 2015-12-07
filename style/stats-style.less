@@ -16,7 +16,7 @@
 @bitter: 'Bitter', serif;
 @margarine: 'Margarine', cursive;
 
-.BitterFont(@textColor: white, @size: 1.25em){
+.BitterFont(@textColor: @charcoal, @size: 1.25em){
 	font-family: @bitter;
 	color: @textColor;
 	font-size: @size;
@@ -73,6 +73,8 @@
 /*--------------------------------------------*/
 
 html, body{
+	background: url('retinaWood.png');
+	color: @charcoal;
 	margin: 0;
 	padding: 0;
 	top: 0;
@@ -120,22 +122,24 @@ header{
 div.tabs-container{
 	width: 100vw;
 	height: @tabHeight;
-	background: white;
+	background: url('retinaWood.png');
 }
 
 ul.tabs-list{
 	width: 100vw;
+	border-bottom: 1vh solid @darkGreen;
 }
 
 li.tab{
 	@spacing: 1.5vh;
 	margin-top: @spacing;
+	margin-left: 2.5vw;
 	padding: 0 @spacing;
 	display: inline-block;
 	width: 20vw;
 	height: @tabHeight - @spacing;
 	line-height: @tabHeight - @spacing;
-	background: @charcoal;
+	background: @darkGreen;
 	font-family: @bitter;
 	color: white;
 	border-top-right-radius: 1.5vh;
@@ -145,10 +149,10 @@ li.tab{
 /*---> PANES <--------------------------------*/
 /*--------------------------------------------*/
 
-@paneHeight: 90vh - 60px;
+@paneHeight: 80vh;
 
 div.pane-container{
-	background: orange;
+	background: transparent;
 	width: 100vw;
 	height: @paneHeight;
 	overflow: hidden;
@@ -158,15 +162,20 @@ div#pane-slider{
 	width: 1000%;
 	display: inline-block;
 	margin: 0;
-	background: blue;
+	background: transparent;
 	.AnimateAll();
 }
 
 section.stats-pane{
 	float: left;
-	width: 100vw;
+	width: 95vw;
+	margin: 2.5vw;
 	height: @paneHeight;
-	background: @charcoal;
+	background: rgba(255, 255, 255, 0.75);
+}
+
+div.pane-content{
+	color: @charcoal;
 }
 
 /*--------------------------------------------*/
