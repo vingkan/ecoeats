@@ -127,10 +127,11 @@ div.tabs-container{
 
 ul.tabs-list{
 	width: 100vw;
-	border-bottom: 1vh solid @darkGreen;
+	border-bottom: 1vh solid @ecoGreen;
 }
 
 li.tab{
+
 	@spacing: 1.5vh;
 	margin-top: @spacing;
 	margin-left: 2.5vw;
@@ -139,10 +140,17 @@ li.tab{
 	width: 20vw;
 	height: @tabHeight - @spacing;
 	line-height: @tabHeight - @spacing;
-	background: @darkGreen;
+	background: @charcoal;
 	font-family: @bitter;
 	color: white;
 	border-top-right-radius: 1.5vh;
+
+	&:hover{
+		background: @ecoGreen;
+	}
+
+	.AnimateAll();
+	
 }
 
 /*--------------------------------------------*/

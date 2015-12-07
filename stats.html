@@ -47,8 +47,8 @@
 
 	<div class="tabs-container">
 		<ul class="tabs-list">
-			<li class="tab" onclick="slideToPane(1);">Traction</li>
-			<li class="tab" onclick="slideToPane(2);">Testing</li>
+			<li class="tab" id='pane1' onclick="slideToPane(1);">Traction</li>
+			<li class="tab" id='pane2' onclick="slideToPane(2);">Testing</li>
 		</ul>
 	</div>
 
@@ -80,6 +80,12 @@
 			var newMargin = -1 * index * tabWidth;
 			var slider = document.getElementById('pane-slider');
 			slider.style.marginLeft = newMargin + 'vw';
+			var panes = document.getElementsByClassName('tab');
+			for(var p = 0; p < panes.length; p++){
+				panes[p].style.background = '#1a1a1a';
+			}
+			var pane = document.getElementById('pane' + paneNumber);
+			pane.style.background = '#00c853';
 		}
 
 	</script>
