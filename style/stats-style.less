@@ -16,6 +16,8 @@
 @bitter: 'Bitter', serif;
 @margarine: 'Margarine', cursive;
 
+@textSize: 3vh;
+
 .BitterFont(@textColor: @charcoal, @size: 1.25em){
 	font-family: @bitter;
 	color: @textColor;
@@ -132,16 +134,21 @@ ul.tabs-list{
 
 li.tab{
 
+	&:first-of-type{
+		margin-left: 2.5vw;
+	}
+
 	@spacing: 1.5vh;
 	margin-top: @spacing;
-	margin-left: 2.5vw;
+	margin-left: 0.25vw;
 	padding: 0 @spacing;
 	display: inline-block;
-	width: 20vw;
+	width: 16vw;
 	height: @tabHeight - @spacing;
 	line-height: @tabHeight - @spacing;
 	background: @charcoal;
 	font-family: @bitter;
+	font-size: 0.75 * @textSize;
 	color: white;
 	border-top-right-radius: 1.5vh;
 
@@ -183,10 +190,11 @@ section.stats-pane{
 }
 
 div.pane-content{
-	color: @charcoal;
-	p{
+
+	h1, p{
 		color: @charcoal
 	}
+
 }
 
 /*--------------------------------------------*/

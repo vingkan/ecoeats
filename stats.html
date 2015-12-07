@@ -12,6 +12,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Margarine|Bitter:s400,400italic,700' rel='stylesheet' type='text/css'>
 	<link rel="icon" type="img/png" href="style/favicon.png" style="width:30px;">
 	<script type="text/javascript" src="moment.js"></script>
+	<script src="style/d3.min.js" charset="utf-8"></script>
+	<script src="style/radialProgress.js"></script>
 	<style>
 
 
@@ -42,8 +44,11 @@
 
 	<div class="tabs-container">
 		<ul class="tabs-list">
-			<li class="tab" id='pane1' onclick="slideToPane(1);">Traction</li>
-			<li class="tab" id='pane2' onclick="slideToPane(2);">Testing</li>
+			<li class="tab" id='pane1' onclick="slideToPane(1);">The Problem</li>
+			<li class="tab" id='pane2' onclick="slideToPane(2);">How it Works</li>
+			<li class="tab" id='pane3' onclick="slideToPane(3);">Business Model</li>
+			<li class="tab" id='pane4' onclick="slideToPane(4);">Competition</li>
+			<li class="tab" id='pane5' onclick="slideToPane(5);">The Future</li>
 		</ul>
 	</div>
 
@@ -53,12 +58,33 @@
 
 			<section class="stats-pane">
 				<div class="pane-content">
-					<p>Traction</p>
+					<h1>The Problem</h1>
+					<div id="radial-pie"></div>
 				</div>
 			</section>
 
 			<section class="stats-pane">
-				<p>Testing</p>
+				<div class="pane-content">
+					<h1>How it Works</h1>
+				</div>
+			</section>
+
+			<section class="stats-pane">
+				<div class="pane-content">
+					<h1>Business Model</h1>
+				</div>
+			</section>
+
+			<section class="stats-pane">
+				<div class="pane-content">
+					<h1>Competition</h1>
+				</div>
+			</section>
+
+			<section class="stats-pane">
+				<div class="pane-content">
+					<h1>The Future</h1>
+				</div>
 			</section>
 
 		</div>
@@ -79,6 +105,19 @@
 			}
 			var pane = document.getElementById('pane' + paneNumber);
 			pane.style.background = '#00c853';
+		}
+
+		var circleDiv = document.getElementById('radial-pie');
+		var circleChart = d3.select(circleDiv);
+
+		start();
+
+		function start(){
+			var radial = radialProgress(circleDiv)
+				.label('Pie Chart')
+				.diameter(150)
+				.value(78)
+				.render();
 		}
 
 	</script>
