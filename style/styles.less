@@ -629,6 +629,8 @@ div.wood{
 /*---> POPUPS <-------------------------------*/
 /*--------------------------------------------*/
 
+@textSize: 3vh;
+
 div.popup{
 
 	background: white;
@@ -639,7 +641,22 @@ div.popup{
 	left: 5vw;
 	
 	button{
+		width: 50vw;
 		background: @ecoGreen;
+		height: 3.0 * @textSize;
+		line-height: 3.0 * @textSize;
+		padding: 0 (1 * @textSize);
+		color: white;
+		font-family: "Bitter";
+		font-size: 2.0 * @textSize;
+		text-align: center;
+	}
+
+	button.small{
+		background: gray;
+		height: 1.5 * @textSize;
+		line-height: 1.5 * @textSize;
+		font-size: 1.0 * @textSize;
 	}
 
 	.AnimateAll();
