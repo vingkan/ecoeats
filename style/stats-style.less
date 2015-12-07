@@ -123,7 +123,7 @@ header{
 
 div.tabs-container{
 	width: 100vw;
-	height: @tabHeight + 1vh;
+	height: @tabHeight + 3vh;
 	background: url('retinaWood.png');
 	overflow-x: scroll;
 	overflow-y: hidden;
@@ -135,9 +135,11 @@ div.tabs-container{
 	@scrollBar: @ecoGreen;
 	@scrollBarBack: @charcoal;
 
+	@scrollBarHeight: 3vh;
+
 	&::-webkit-scrollbar{
-		width: 10px;
-		height: 10px;
+		width: @scrollBarHeight;
+		height: @scrollBarHeight;
 		background: @scrollBarBack;
 	}
 
@@ -157,12 +159,12 @@ div.tabs-container{
 		background: @scrollBar;
 		border-radius: 0;
 		position: absolute;
-		margin-left: -10px;
+		margin-left: -1 * @scrollBarHeight;
 	}
 
 	&::-webkit-scrollbar-corner{
-		width: 10px;
-		height: 10px;
+		width: @scrollBarHeight;
+		height: @scrollBarHeight;
 		background: @scrollBarBack;
 	}
 
@@ -172,8 +174,10 @@ div.tabs-container{
 
 }
 
+@spacing: 1.5vh;
+
 ul.tabs-list{
-	width: 6 * 7.5 * @textSize;
+	width: (5 * ((2 * @spacing) + (6.0 * @textSize) + 2.0vw)) + 2.5vw;
 	height: @tabHeight;
 }
 
@@ -183,7 +187,6 @@ li.tab{
 		margin-left: 2.5vw;
 	}
 
-	@spacing: 1.5vh;
 	margin-top: @spacing;
 	margin-left: 1vw;
 	padding: 0 @spacing;
