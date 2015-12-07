@@ -63,6 +63,11 @@
 	-webkit-animation: animatedBackgroundLeft 800s linear infinite;
 }
 
+.AnimateAll(){
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
 /*--------------------------------------------*/
 /*---> LAYOUT <-------------------------------*/
 /*--------------------------------------------*/
@@ -618,6 +623,31 @@ div.wood{
 	
 	
 
+}
+
+/*--------------------------------------------*/
+/*---> POPUPS <-------------------------------*/
+/*--------------------------------------------*/
+
+div.popup{
+
+	background: white;
+	height: 50vh;
+	width: 90vw;
+	position: fixed;
+	bottom: 0;
+	left: 5vw;
+	
+	button{
+		background: @ecoGreen;
+	}
+
+	.AnimateAll();
+
+}
+
+div.closed{
+	height: 0;
 }
 
 /*--------------------------------------------*/
