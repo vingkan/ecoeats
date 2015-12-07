@@ -123,7 +123,7 @@ header{
 
 div.tabs-container{
 	width: 100vw;
-	height: @tabHeight + 3vh;
+	height: @tabHeight + 2vh;
 	background: url('retinaWood.png');
 	overflow-x: scroll;
 	overflow-y: hidden;
@@ -251,18 +251,41 @@ div.pane-content{
 
 div#radial-pie{
 
-	width: 100%;
+	.radial-svg{
+		width: 50vw;
+	}
+
+	.component{
+
+		width: 50vw;
+
+		path{
+			fill: rgba(255, 255, 255, 0.5);
+		}
+
+	}
 
 	.background{
 		fill: transparent;
 	}
 
 	.arc{
+		fill: @ecoGreen;
+	}
+
+	.arc2{
 		fill: blue;
 	}
 
-	text{
+	.labels{
+		width: 50vw;
+	}
+
+	text.label{
+		text-anchor: middle;
 		font-family: "Bitter";
+		font-weight: bold;
+		fill: @charcoal;
 	}
 
 }

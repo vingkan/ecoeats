@@ -59,7 +59,9 @@
 			<section class="stats-pane">
 				<div class="pane-content">
 					<h1>The Problem</h1>
-					<div id="radial-pie"></div>
+					<center>
+						<div id="radial-pie"></div>
+					</center>
 				</div>
 			</section>
 
@@ -115,7 +117,7 @@
 		function start(){
 			var radial = radialProgress(circleDiv)
 				.label('Pie Chart')
-				.diameter(150)
+				.diameter(200)
 				.value(78)
 				.render();
 		}
