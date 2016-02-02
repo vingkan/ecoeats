@@ -82,6 +82,8 @@
 
 	<script type="text/javascript">
 
+		var DISPLAY_PAST = true;
+
 		function submitChef(){
 			var newUser = new Date();
 			var userInput = document.getElementById('teaserForm').value;
@@ -101,7 +103,7 @@
 				var meal = new Meal(childData);
 				meals.push(meal);
 			});
-			loadMeals();
+			loadMeals(DISPLAY_PAST);
 		});
 
 		var chefsDatabase = new Firebase('https://ecoeats.firebaseio.com/chefs');
